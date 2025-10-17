@@ -11,11 +11,13 @@ const Reports = lazy(() => import("@/components/pages/Reports"));
 const NotFound = lazy(() => import("@/components/pages/NotFound"));
 
 // Wrap each lazy component in Suspense
-const SuspenseWrapper = (Component) => (
-  <Suspense fallback={<div>Loading.....</div>}>
-    <Component />
-  </Suspense>
-);
+const SuspenseWrapper = (Component) => {
+  return (
+    <Suspense fallback={<div>Loading.....</div>}>
+      <Component />
+    </Suspense>
+  );
+};
 
 const mainRoutes = [
   {
